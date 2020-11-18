@@ -7,70 +7,59 @@ tasks = [
 ]
 
 
-# Question 2
-# Print  alist 
+#Print a list of uncompleted tasks
 
-
-# def uncompleted_tasks(list):
-#     tasks_to_do = []
-#     for task in list:
-#         if task['completed'] == False:
-#             tasks_to_do.append(task['description'])
-#     return tasks_to_do       
+def uncompleted_tasks(list):
+    tasks_to_do = []
+    for task in list:
+        if task['completed'] == False:
+            tasks_to_do.append(task['description'])
+    return tasks_to_do       
             
+print(uncompleted_tasks(tasks))
 
 
 
-#print(uncompleted_tasks(tasks))
+# Print a list of completed tasks
+
+def completed_tasks(list):
+    tasks_to_do = []
+    for task in list:
+        if task['completed'] == True:
+            tasks_to_do.append(task['description'])
+    return tasks_to_do  
+
+print(completed_tasks(tasks))
 
 
+#Print a list of all task descriptions
 
-# # Question 2
+def task_description(list):
+    for task in list:
+        print(task["description"])
 
-# # all_tasks = tasks[("description")]
-# # print(all_tasks)
+task_description(tasks)
 
-# def uncompleted_tasks(list, condition):
-#     tasks_to_do = []
-#     for task in list:
-#         if task['completed'] == condition:
-#             tasks_to_do.append(task['description'])
-#     return tasks_to_do  
+# Get tasks where time_taken is at least a given time
 
-# print(uncompleted_tasks(tasks, True))
+def long_tasks(list):
+    tasks_to_do = []
+    for task in list:
+        if task['time_taken'] > 20:
+            tasks_to_do.append(task['description'])
+    return tasks_to_do   
 
-
-# Question 3
-
-# def create_list_of_task_descriptions(list):
-#     tasks_descriptions = []
-#     for task in list:
-# #        if task['completed'] == condition:
-#         tasks_descriptions.append(task["description"])
-#     return tasks_descriptions 
-
-# print(create_list_of_task_descriptions(tasks))
-
-
-# Question 4
-
-# def long_tasks(list):
-#     tasks_to_do = []
-#     for task in list:
-#         if task['time_taken'] > 20:
-#             tasks_to_do.append(task['description'])
-#     return tasks_to_do   
-
-# print(long_tasks(tasks))
+print(long_tasks(tasks))
 
 # Question 5
-def task_details(list, task_description):
-    information_about_task = None
-    for task in list:
-        if task_description == list["description"]:
-            information_about_task = task
-    return information_about_task        
+# def task_details(list, task_description):
+#     information_about_task = None
+#     for task in list:
+#         if task_description == list["description"]:
+#             #return task
+#             information_about_task = task
+#     return information_about_task        
 
-print(task_details(tasks, "Wash Dishes"))
+# print(task_details(tasks, "Wash Dishes"))
 
 
